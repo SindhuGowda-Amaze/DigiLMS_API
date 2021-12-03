@@ -390,28 +390,7 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
-        [HttpPost]
-        [Route("Master/UpdateFoodSenseProject")]
-        public HttpResponseMessage UpdateFoodSenseProject(MasterEntity entity)
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object res = IMasterManager.UpdateFoodSenseProject(entity);
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in UpdateFoodSenseProject + ex");
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
-
-
+      
         [HttpGet]
         [Route("Master/GetCompanyProfile")]
         public HttpResponseMessage GetCompanyProfile()
