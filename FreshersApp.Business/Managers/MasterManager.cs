@@ -19,6 +19,138 @@ namespace FreshersApp.Business.Managers
             this.IMasterRepository = IMasterRepository;
         }
 
+        //getCostcenter and department
+
+
+
+        public IEnumerable<dynamic> GetCostcenter()
+        {
+            try
+            {
+                return IMasterRepository.GetCostcenter<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<dynamic> GetDepartment()
+        {
+            try
+            {
+                return IMasterRepository.GetDepartment<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertDepartment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Remarks = entity.Remarks,
+                };
+                return IMasterRepository.InsertDepartment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdateDepartment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Remarks = entity.Remarks,
+                };
+                return IMasterRepository.UpdateDepartment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeleteDepartment(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteDepartment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+        public long InsertCostcenter(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Remarks = entity.Remarks,
+                };
+                return IMasterRepository.InsertCostcenter(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateCostcenter(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Remarks = entity.Remarks,
+                };
+                return IMasterRepository.UpdateCostcenter(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCostcenter(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteCostcenter(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
         public long DeleteCompanyProfile(object filter)
         {
             try
@@ -159,7 +291,43 @@ namespace FreshersApp.Business.Managers
             }
         }
 
-        public long UpdateFoodSenseProject(MasterEntity entity)
+
+        public IEnumerable<dynamic> GetOTRates()
+        {
+            try
+            {
+                return IMasterRepository.GetOTRates<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public long InsertOTRates(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Day = entity.Day,
+                    Normal = entity.Normal,
+                    OT = entity.OT,
+                    ND = entity.ND,
+                    NDOT = entity.NDOT,
+                    ModifiedBy = entity.ModifiedBy,
+                
+                };
+                return IMasterRepository.InsertOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateOTRates(MasterEntity entity)
         {
             try
             {
@@ -174,7 +342,19 @@ namespace FreshersApp.Business.Managers
                     Highlights = entity.Highlights,
                     Photo = entity.PhotoURL
                 };
-                return IMasterRepository.UpdateFoodSenseProject(filter);
+                return IMasterRepository.UpdateOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteOTRates(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteOTRates(filter);
             }
             catch (Exception ex)
             {
