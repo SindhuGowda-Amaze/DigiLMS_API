@@ -28,15 +28,24 @@ namespace FreshersApp.Business.Interface
       
         Int64 InsertFoodSenseProjects(MasterEntity entity);
         
-        Int64 UpdateFoodSenseProject(MasterEntity entity);
+
        
         Int64 DeleteFoodSenseProject(object filter);
 
+        IEnumerable<dynamic> GetOTRates();
+
+        Int64 InsertOTRates(MasterEntity entity);
+
+        Int64 UpdateOTRates(MasterEntity entity);
+
+        Int64 DeleteOTRates(object filter);
 
 
 
-      
+
+
+
     }
-    
+
 }
 

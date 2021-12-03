@@ -141,17 +141,7 @@ namespace FreshersApp.Data.Repositories
             }
         }
 
-        public long UpdateFoodSenseProject(object filter)
-        {
-            try
-            {
-                return db.Query<Int64>("[dbo].[SProc_UpdateFoodSenseProject]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+ 
 
         public long DeleteFoodSenseProject(object filter)
         {
@@ -164,6 +154,53 @@ namespace FreshersApp.Data.Repositories
                 throw ex;
             }
         }
+
+
+        public IEnumerable<T> GetOTRates<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetOTRates]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertOTRates(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertOTRates]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdateOTRates(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateOTRates]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeleteOTRates(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteOTRates]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
     }
 }

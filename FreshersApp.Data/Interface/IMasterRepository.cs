@@ -20,8 +20,15 @@ namespace FreshersApp.Data.Interface
 
         IEnumerable<T> GetFoodSenseProjects<T>();
         Int64 InsertFoodSenseProjects(object filter);
-        Int64 UpdateFoodSenseProject(object filter);
+
         Int64 DeleteFoodSenseProject(object filter);
+
+        IEnumerable<T> GetOTRates<T>();
+        Int64 InsertOTRates(object filter); 
+         Int64 UpdateOTRates(object filter);
+        Int64 DeleteOTRates(object filter);
+
+
     }
 
 }

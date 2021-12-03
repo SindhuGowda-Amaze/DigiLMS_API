@@ -42,5 +42,20 @@ namespace FreshersApp.Business.Entities
         public string Testimonial { get; set; }
         public string Action { get; set; }
 
+        public string Day { get; set; }
+
+
+        public string Normal { get; set; }
+
+        public string OT { get; set; }
+
+        public string ND { get; set; }
+        public string NDOT { get; set; }
+
+        public string ModifiedBy { get; set; }
+
+
+
+
     }
 }

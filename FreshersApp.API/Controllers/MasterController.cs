@@ -125,6 +125,94 @@ namespace FreshersApp.API.Controllers
         }
 
 
+        [HttpGet]
+        [Route("Master/GetOTRates")]
+        public HttpResponseMessage GetOTRates()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetOTRates();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetOTRates + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/InsertOTRates")]
+        public HttpResponseMessage InsertOTRates(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.InsertOTRates(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in InsertOTRates + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/UpdateOTRates")]
+        public HttpResponseMessage UpdateOTRates(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.UpdateOTRates(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in UpdateOTRates + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpGet]
+        [Route("Master/DeleteOTRates")]
+        public HttpResponseMessage DeleteOTRates(Int64 ID)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                var filter = new { ID = ID };
+                Int64 res = IMasterManager.DeleteOTRates(filter);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in DeleteOTRates + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+
+
+
 
 
 

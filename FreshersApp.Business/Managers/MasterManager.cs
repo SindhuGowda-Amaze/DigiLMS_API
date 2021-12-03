@@ -120,7 +120,7 @@ namespace FreshersApp.Business.Managers
             {
                 var filter = new
                 {
-                    ID=entity.ID,
+                    ID = entity.ID,
                     Name = entity.Name,
                     Code = entity.Code,
                     Remarks = entity.Remarks,
@@ -144,7 +144,7 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
-      
+
 
 
 
@@ -165,17 +165,17 @@ namespace FreshersApp.Business.Managers
 
         public IEnumerable<dynamic> GetFoodSenseProjects()
         {
-                try
-                {
-                    return IMasterRepository.GetFoodSenseProjects<dynamic>();
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+            try
+            {
+                return IMasterRepository.GetFoodSenseProjects<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-       
+
 
         public long InsertFoodSenseProjects(MasterEntity entity)
         {
@@ -184,12 +184,12 @@ namespace FreshersApp.Business.Managers
                 var filter = new
                 {
                     ProjectTypeID = entity.@ProjectTypeID,
-                    ProjectName=entity.ProjectName,
-                    ProjectDescription=entity.ProjectDescription,
-                    ClientName=entity.ClientName,
-                    ClientLocation=entity.ClientLocation,
-                    Highlights=entity.Highlights,
-                    Photo=entity.PhotoURL
+                    ProjectName = entity.ProjectName,
+                    ProjectDescription = entity.ProjectDescription,
+                    ClientName = entity.ClientName,
+                    ClientLocation = entity.ClientLocation,
+                    Highlights = entity.Highlights,
+                    Photo = entity.PhotoURL
                 };
                 return IMasterRepository.InsertFoodSenseProjects(filter);
             }
@@ -199,22 +199,12 @@ namespace FreshersApp.Business.Managers
             }
         }
 
-        public long UpdateFoodSenseProject(MasterEntity entity)
+
+        public IEnumerable<dynamic> GetOTRates()
         {
             try
             {
-                var filter = new
-                {
-                    ID=entity.ID,
-                    ProjectTypeID = entity.ProjectTypeID,
-                    ProjectName = entity.ProjectName,
-                    ProjectDescription = entity.ProjectDescription,
-                    ClientName = entity.ClientName,
-                    ClientLocation = entity.ClientLocation,
-                    Highlights = entity.Highlights,
-                    Photo = entity.PhotoURL
-                };
-                return IMasterRepository.UpdateFoodSenseProject(filter);
+                return IMasterRepository.GetOTRates<dynamic>();
             }
             catch (Exception ex)
             {
@@ -222,7 +212,68 @@ namespace FreshersApp.Business.Managers
             }
         }
 
-      
+
+        public long InsertOTRates(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Day = entity.Day,
+                    Normal = entity.Normal,
+                    OT = entity.OT,
+                    ND = entity.ND,
+                    NDOT = entity.NDOT,
+                    ModifiedBy = entity.ModifiedBy,
+                
+                };
+                return IMasterRepository.InsertOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateOTRates(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Day = entity.Day,
+                    Normal = entity.Normal,
+                    OT = entity.OT,
+                    ND = entity.ND,
+                    NDOT = entity.NDOT,
+                    ModifiedBy = entity.ModifiedBy,
+
+                };
+                return IMasterRepository.UpdateOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteOTRates(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
     }
 }
 
