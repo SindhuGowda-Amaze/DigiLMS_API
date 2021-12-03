@@ -43,5 +43,73 @@ namespace FreshersApp.Business.Entities
         public string Testimonial { get; set; }
         public string Action { get; set; }
 
-    }
+
+		public string Company_logo { get; set; }
+		public string Company_Name { get; set; }
+		public string Nature_Of_Business { get; set; }
+		public string Address1 { get; set; }
+		public string Address2 { get; set; }
+		public string Zipcode { get; set; }
+		public Int64 RDO { get; set; }
+		public string Email { get; set; }
+		public string Phone { get; set; }
+		public string Password { get; set; }
+		public string Fax { get; set; }
+		public string Tin { get; set; }
+		public string SSN_No { get; set; }
+		public string PhilHealthNumber { get; set; }
+		public string HDMFNumber { get; set; }
+		public string Admin_AuthorisedPerson { get; set; }
+		public string Admin_PositionTitle { get; set; }
+		public string HR_AuthorisedPerson { get; set; }
+		public string HR_PositionTitle { get; set; }
+		public string Finance_AuthorisedPerson { get; set; }
+		public string Finance_PositionTitle { get; set; }
+		public string E_Signatory { get; set; }
+		public Int64 Work_Days_Per_Year { get; set; }
+		public Int64 Work_Days_Per_Day { get; set; }
+		public Int64 Work_Months_Per_Year { get; set; }
+		public DateTime Work_hour_Start { get; set; }
+		public DateTime Work_hour_End { get; set; }
+		public DateTime Break_Hours { get; set; }
+		public string Periods_Per_Month { get; set; }
+		public string Absent_Deduction { get; set; }
+		public string Late_Deduction { get; set; }
+		public string OverTime_Comeptition_Optional { get; set; }
+		public string OverTime_Comeptition_OTRates { get; set; }
+		public string RestDays { get; set; }
+		public string thirteen_Month_Compuatation_Type { get; set; }
+		public bool thirteen_Month_Deduct_Absent { get; set; }
+		public bool thirteen_Month_Deduct_Late { get; set; }
+		public string thirteen_Month_Optional { get; set; }
+		public bool FinalPay_Deduct_Absent { get; set; }
+		public bool FinalPay_Deduct_Late { get; set; }
+		public bool Final_Pay_13th_Month { get; set; }
+		public bool NetPay_Threshold { get; set; }
+		public string SSS_Coverage { get; set; }
+		public string SSS_Optional { get; set; }
+		public string PhilHealth_Coverage { get; set; }
+		public string PhilHealth_Optional { get; set; }
+		public string HDMS { get; set; }
+		public string HDMF_Employer_Contribution { get; set; }
+		public bool PayRoll_Calender { get; set; }
+		public string Tax_Table { get; set; }
+		public string Tax_Table_Starts_on { get; set; }
+		public bool Tax_Table_Including_13thmonth { get; set; }
+		public string Non_Tax_Essential_Sealing { get; set; }
+		public string Deminimis_Exemption { get; set; }
+		public string Day { get; set; }
+		public string Normal { get; set; }
+		public string OT { get; set; }
+		public string ND { get; set; }
+		public string NDOT { get; set; }
+		public string ModifiedBy { get; set; }
+
+
+
+
+
+
+
+	}
 }
