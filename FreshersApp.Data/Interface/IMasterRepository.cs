@@ -12,6 +12,11 @@ namespace FreshersApp.Data.Interface
         Int64 InsertFoodSenseProjects(object filter);
         Int64 UpdateFoodSenseProject(object filter);
         Int64 DeleteFoodSenseProject(object filter);
+
+
+        IEnumerable<T> GetCompanyProfile<T>();
+        Int64 InsertCompany_Profile(object filter);
+        Int64 DeleteCompanyProfile(object filter);
     }
 
 }
