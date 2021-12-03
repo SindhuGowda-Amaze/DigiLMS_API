@@ -44,3 +44,7 @@ C:\Users\Public\Videos\FreshersAppAPI\FreshersApp.Data\obj\Debug\FreshersApp.Dat
 C:\Users\Public\Videos\FreshersAppAPI\FreshersApp.Data\obj\Debug\FreshersApp.Data.csproj.CopyComplete
 C:\Users\Public\Videos\FreshersAppAPI\FreshersApp.Data\obj\Debug\Cotopaxi.Data.dll
 C:\Users\Public\Videos\FreshersAppAPI\FreshersApp.Data\obj\Debug\Cotopaxi.Data.pdb
+C:\DigiofficeNewApp\FreshersApp.Data\obj\Debug\FreshersApp.Data.csproj.AssemblyReference.cache
+C:\DigiofficeNewApp\FreshersApp.Data\obj\Debug\FreshersApp.Data.csproj.CoreCompileInputs.cache
+C:\DigiofficeNewApp\FreshersApp.Data\obj\Debug\Cotopaxi.Data.dll
+C:\DigiofficeNewApp\FreshersApp.Data\obj\Debug\Cotopaxi.Data.pdb
