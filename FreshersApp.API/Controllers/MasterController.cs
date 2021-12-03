@@ -60,26 +60,7 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
-        [HttpGet]
-        [Route("Master/GetProjectTypeMaster")]
-        public HttpResponseMessage GetProjectTypeMaster()
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object res = IMasterManager.GetProjectTypeMaster();
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in GetProjectTypeMaster + ex");
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
+       
 
 
         [HttpGet]
@@ -146,113 +127,6 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
-
-        [HttpGet]
-        [Route("Master/LoginPage")]
-        public HttpResponseMessage LoginPage()
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object ArticleEntity;
-                ArticleEntity = IMasterManager.LoginPage();
-                response = Request.CreateResponse(HttpStatusCode.OK, ArticleEntity);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in Articles/LoginPage:" + ex);
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
-
-        [HttpGet]
-        [Route("Master/GetEnquery")]
-        public HttpResponseMessage GetEnquery()
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object res = IMasterManager.GetEnquery();
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in GetEnquery:" + ex);
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
-
-        [HttpGet]
-        [Route("Master/DeleteEnquery")]
-        public HttpResponseMessage DeleteEnquery(Int64 ID)
-        {
-            HttpResponseMessage response;
-            try
-            {
-                var filter = new { ID = ID };
-                Int64 res = IMasterManager.DeleteEnquery(filter);
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in DeleteEnquery + ex");
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
-
-        [HttpPost]
-        [Route("Master/InsertEnquery")]
-        public HttpResponseMessage InsertEnquery(MasterEntity entity)
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object res = IMasterManager.InsertEnquery(entity);
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in InsertEnquery + ex");
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
-
-        [HttpPost]
-        [Route("Master/UpdateEnquery")]
-        public HttpResponseMessage UpdateEnquery(MasterEntity entity)
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object res = IMasterManager.UpdateEnquery(entity);
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in UpdateEnquery + ex");
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
 
 
         //Important!!!

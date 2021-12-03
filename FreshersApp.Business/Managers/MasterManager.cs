@@ -43,17 +43,7 @@ namespace FreshersApp.Business.Managers
                 }
         }
 
-        public IEnumerable<dynamic> GetProjectTypeMaster()
-        {
-            try
-            {
-                return IMasterRepository.GetProjectTypeMaster<dynamic>();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+       
 
         public long InsertFoodSenseProjects(MasterEntity entity)
         {
@@ -100,84 +90,7 @@ namespace FreshersApp.Business.Managers
             }
         }
 
-        public IEnumerable<dynamic> LoginPage()
-        {
-            try
-            {
-                return IMasterRepository.LoginPage<dynamic>();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public IEnumerable<dynamic> GetEnquery()
-        {
-            try
-            {
-                return IMasterRepository.GetEnquery<dynamic>();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public long InsertEnquery(MasterEntity entity)
-        {
-            try
-            {
-                var filter = new
-                {
-                    Date=entity.Date,
-                    Name=entity.Name,
-                    PhoneNumber=entity.PhoneNumber,
-                    //EmailID=entity.EmailID,
-                    //Message=entity.Message,
-                    Action=entity.Action
-                };
-                return IMasterRepository.InsertEnquery(filter);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public long UpdateEnquery(MasterEntity entity)
-        {
-            try
-            {
-                var filter = new
-                {
-                    ID=entity.ID,
-                    Date = entity.Date,
-                    Name = entity.Name,
-                    PhoneNumber = entity.PhoneNumber,
-                    //EmailID = entity.EmailID,
-                    //Message = entity.Message,
-                    Action = entity.Action
-                };
-                return IMasterRepository.UpdateEnquery(filter);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public long DeleteEnquery(object filter)
-        {
-            try
-            {
-                return IMasterRepository.DeleteEnquery(filter);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+      
     }
 }
 
