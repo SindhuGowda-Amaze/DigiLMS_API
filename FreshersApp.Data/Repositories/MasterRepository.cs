@@ -17,6 +17,67 @@ namespace FreshersApp.Data.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<T> GetPhilHealth<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetPhilHealth]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetTaxtable<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetTaxtable]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertPhilHealth(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertPhilHealth]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdatePhilHealth(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdatePhilHealth]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeletePhilHealth(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeletePhilHealth]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
         public IEnumerable<T> GetDepartment<T>()
         {
             try
@@ -113,6 +174,53 @@ namespace FreshersApp.Data.Repositories
         }
 
 
+        public IEnumerable<T> GetCompanyAdjustment<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetCompanyAdjustment]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertCompanyAdjustment(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertCompanyAdjustment]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateCompanyAdjustment(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateCompanyAdjustment]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCompanyAdjustment(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteCompanyAdjustment]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
 
 
@@ -128,7 +236,6 @@ namespace FreshersApp.Data.Repositories
                 throw ex;
             }
         }
-
         public long InsertFoodSenseProjects(object filter)
         {
             try
@@ -156,17 +263,7 @@ namespace FreshersApp.Data.Repositories
         }
 
 
-        public IEnumerable<T> GetOTRates<T>()
-        {
-            try
-            {
-                return db.Query<T>("[dbo].[SProc_GetOTRates]", commandType: CommandType.StoredProcedure);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
         public long InsertOTRates(object filter)
         {
             try
@@ -231,6 +328,109 @@ namespace FreshersApp.Data.Repositories
             try
             {
                 return db.Query<Int64>("[dbo].[SProc_DeleteCompanyProfile]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetOTRates<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetOTRates]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetBanks<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[Spro_GetBanks]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertBanks(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_InsertBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdateBanks(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_UpdateBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeleteBanks(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_DeleteBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public IEnumerable<T> GetPayGroup<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[Spro_GetPayGroup]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertPayGroup(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_InsertPayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdatePayGroup(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_UpdatePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeletePayGroup(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_DeletePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {

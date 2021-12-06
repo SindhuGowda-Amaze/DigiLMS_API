@@ -7,10 +7,25 @@ using System.Threading.Tasks;
 namespace FreshersApp.Business.Entities
 {
     public class MasterEntity
-    {
 
-        public String Code { get; set; }
-        public String Remarks { get; set; }
+    { 
+        public string Changes { get; set; }
+        public string ModifiedBy { get; set; }
+        public Int64 Monthly_Basic_Salary_Into_Five { get; set; }
+        public Int64 Monthly_Share { get; set; }
+        public Int64 Personal_Share { get; set; }
+        public Int64 Employee_Share { get; set; }
+        public bool BeforeTax { get; set; }
+        public float Amount { get; set; }
+        public bool Taxable { get; set; }
+        public string MaxAccumulated { get; set; }
+        public string Type { get; set; }
+        public string Code { get; set; }
+        public string Remarks { get; set; }
+
+   
+
+
         public string Name { get; set; }
         public string EmailID { get; set; }
         public string PhoneNumber { get; set; }
@@ -103,7 +118,7 @@ namespace FreshersApp.Business.Entities
 		public string OT { get; set; }
 		public string ND { get; set; }
 		public string NDOT { get; set; }
-		public string ModifiedBy { get; set; }
+		
 
 
 		public Int64 Min_Range { get; set; }

@@ -11,7 +11,8 @@ namespace FreshersApp.Business.Interface
     {
 
         //GetCostCenter
-        IEnumerable<dynamic>GetCostcenter();
+        IEnumerable<dynamic> GetCostcenter();
+        IEnumerable<dynamic> GetTaxtable();
 
         Int64 InsertCostcenter(MasterEntity entity);
 
@@ -22,6 +23,18 @@ namespace FreshersApp.Business.Interface
         Int64 InsertDepartment(MasterEntity entity);
         Int64 UpdateDepartment(MasterEntity entity);
         Int64 DeleteDepartment(object filter);
+        IEnumerable<dynamic>GetCompanyAdjustment();
+        Int64 InsertCompanyAdjustment(MasterEntity entity);
+        Int64 UpdateCompanyAdjustment(MasterEntity entity);
+        Int64 DeleteCompanyAdjustment(object filter);
+
+        IEnumerable<dynamic>GetPhilHealth();
+        Int64 InsertPhilHealth(MasterEntity entity);
+        Int64 UpdatePhilHealth(MasterEntity entity);
+        Int64 DeletePhilHealth(object filter);
+
+
+
 
 
         IEnumerable<dynamic> GetFoodSenseProjects();
@@ -32,7 +45,7 @@ namespace FreshersApp.Business.Interface
        
         Int64 DeleteFoodSenseProject(object filter);
 
-        IEnumerable<dynamic> GetOTRates();
+      
 
         Int64 InsertOTRates(MasterEntity entity);
 
@@ -57,6 +70,26 @@ namespace FreshersApp.Business.Interface
         Int64 UpdateSSS(MasterEntity entity);
 
         Int64 DeleteSSS(object filter);
+
+
+        IEnumerable<dynamic> GetBanks();
+
+        Int64 InsertBanks(MasterEntity entity);
+
+        Int64 UpdateBanks(MasterEntity entity);
+
+        Int64 DeleteBanks(object filter);
+
+
+        IEnumerable<dynamic> GetPayGroup();
+
+        Int64 InsertPayGroup(MasterEntity entity);
+
+        Int64 UpdatePayGroup(MasterEntity entity);
+
+        Int64 DeletePayGroup(object filter);
+
+        IEnumerable<dynamic> GetOTRates();
 
     }
 
