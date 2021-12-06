@@ -390,26 +390,26 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
-        [HttpPost]
-        [Route("Master/UpdateFoodSenseProject")]
-        public HttpResponseMessage UpdateFoodSenseProject(MasterEntity entity)
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object res = IMasterManager.UpdateFoodSenseProject(entity);
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in UpdateFoodSenseProject + ex");
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
+        //[HttpPost]
+        //[Route("Master/UpdateFoodSenseProject")]
+        //public HttpResponseMessage UpdateFoodSenseProject(MasterEntity entity)
+        //{
+        //    HttpResponseMessage response;
+        //    try
+        //    {
+        //        object res = IMasterManager.UpdateFoodSenseProject(entity);
+        //        response = Request.CreateResponse(HttpStatusCode.OK, res);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        if (log.IsErrorEnabled)
+        //        {
+        //            log.Error("Error in UpdateFoodSenseProject + ex");
+        //        }
+        //        response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+        //    }
+        //    return response;
+        //}
 
 
         [HttpGet]
@@ -476,6 +476,92 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
+
+        [HttpGet]
+        [Route("Master/GetSSS")]
+        public HttpResponseMessage GetSSS()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetSSS();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetSSS + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/InsertSSS")]
+        public HttpResponseMessage InsertSSS(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.InsertSSS(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in InsertSSS + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpGet]
+        [Route("Master/DeleteSSS")]
+        public HttpResponseMessage DeleteSSS(Int64 ID)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                var filter = new { ID = ID };
+                Int64 res = IMasterManager.DeleteSSS(filter);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in DeleteSSS + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+
+        [HttpPost]
+        [Route("Master/UpdateSSS")]
+        public HttpResponseMessage UpdateSSS(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.UpdateSSS(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in UpdateSSS + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
 
 
 

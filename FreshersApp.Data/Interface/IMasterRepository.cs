@@ -34,6 +34,12 @@ namespace FreshersApp.Data.Interface
         Int64 DeleteOTRates(object filter);
 
 
+        IEnumerable<T> GetSSS<T>();
+        Int64 InsertSSS(object filter);
+        Int64 UpdateSSS(object filter);
+        Int64 DeleteSSS(object filter);
+
+
     }
 
 }
