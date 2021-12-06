@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace FreshersApp.Business.Entities
 {
     public class MasterEntity
-<<<<<<< HEAD
+
     { 
         public string Changes { get; set; }
         public string ModifiedBy { get; set; }
@@ -22,12 +22,10 @@ namespace FreshersApp.Business.Entities
         public string Type { get; set; }
         public string Code { get; set; }
         public string Remarks { get; set; }
-=======
-    {
 
-        public String Code { get; set; }
-        public String Remarks { get; set; }
->>>>>>> c4de5d3bb52da289f61ef5bf985716cdf41d5737
+   
+
+
         public string Name { get; set; }
         public string EmailID { get; set; }
         public string PhoneNumber { get; set; }
@@ -120,7 +118,7 @@ namespace FreshersApp.Business.Entities
 		public string OT { get; set; }
 		public string ND { get; set; }
 		public string NDOT { get; set; }
-		public string ModifiedBy { get; set; }
+		
 
 
 		public Int64 Min_Range { get; set; }
