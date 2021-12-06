@@ -106,7 +106,17 @@ namespace FreshersApp.Business.Entities
 		public string ModifiedBy { get; set; }
 
 
-
+		public Int64 Min_Range { get; set; }
+		public Int64 Max_Range { get; set; }
+		public Int64 Monthly_Salary_Creadited { get; set; }
+		public Int64 SS_ER { get; set; }
+		public Int64 SS_EE { get; set; }
+		public Int64 SS_Total { get; set; }
+		public Int64 MPF_ER { get; set; }
+		public Int64 MPF_EE { get; set; }
+		public Int64 EC_ER { get; set; }
+		public Int64 Total_Contribution { get; set; }
+	
 
 
 

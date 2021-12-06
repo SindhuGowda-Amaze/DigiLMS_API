@@ -43,16 +43,38 @@ namespace FreshersApp.Business.Interface
 
 
 
-
-
-
-
-
         IEnumerable<dynamic> GetCompanyProfile();
 
         Int64 InsertCompany_Profile(MasterEntity entity);
 
         Int64 DeleteCompanyProfile(object filter);
+
+
+        IEnumerable<dynamic> GetSSS();
+
+        Int64 InsertSSS(MasterEntity entity);
+
+        Int64 UpdateSSS(MasterEntity entity);
+
+        Int64 DeleteSSS(object filter);
+
+
+        IEnumerable<dynamic> GetBanks();
+
+        Int64 InsertBanks(MasterEntity entity);
+
+        Int64 UpdateBanks(MasterEntity entity);
+
+        Int64 DeleteBanks(object filter);
+
+
+        IEnumerable<dynamic> GetPayGroup();
+
+        Int64 InsertPayGroup(MasterEntity entity);
+
+        Int64 UpdatePayGroup(MasterEntity entity);
+
+        Int64 DeletePayGroup(object filter);
 
         IEnumerable<dynamic> GetOTRates();
 
