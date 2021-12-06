@@ -252,7 +252,7 @@ namespace FreshersApp.Business.Managers
                     SSS_Optional = entity.SSS_Optional,
                     PhilHealth_Coverage = entity.PhilHealth_Coverage,
                     PhilHealth_Optional = entity.PhilHealth_Optional,
-                    HDMS = entity.HDMS,
+                    HDMF = entity.HDMF,
                     HDMF_Employer_Contribution = entity.HDMF_Employer_Contribution,
                     PayRoll_Calender = entity.PayRoll_Calender,
                     Tax_Table = entity.Tax_Table,

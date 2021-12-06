@@ -90,7 +90,7 @@ namespace FreshersApp.Business.Entities
 		public string SSS_Optional { get; set; }
 		public string PhilHealth_Coverage { get; set; }
 		public string PhilHealth_Optional { get; set; }
-		public string HDMS { get; set; }
+		public string HDMF{ get; set; }
 		public string HDMF_Employer_Contribution { get; set; }
 		public bool PayRoll_Calender { get; set; }
 		public string Tax_Table { get; set; }
