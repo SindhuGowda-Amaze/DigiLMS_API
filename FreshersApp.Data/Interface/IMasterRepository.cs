@@ -18,6 +18,18 @@ namespace FreshersApp.Data.Interface
         Int64 UpdateDepartment(object filter);
         Int64 DeleteDepartment(object filter);
 
+        IEnumerable<T> GetCompanyAdjustment<T>();
+        Int64 InsertCompanyAdjustment(object filter);
+        Int64 UpdateCompanyAdjustment(object filter);
+        Int64 DeleteCompanyAdjustment(object filter);
+
+        IEnumerable<T>GetPhilHealth<T>();
+        Int64 InsertPhilHealth(object filter);
+        Int64 UpdatePhilHealth(object filter);
+        Int64 DeletePhilHealth(object filter);
+
+
+
         IEnumerable<T> GetFoodSenseProjects<T>();
         Int64 InsertFoodSenseProjects(object filter);
 

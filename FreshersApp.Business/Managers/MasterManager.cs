@@ -35,6 +35,86 @@ namespace FreshersApp.Business.Managers
             }
         }
 
+        public IEnumerable<dynamic> GetPhilHealth()
+        {
+            try
+            {
+                return IMasterRepository.GetPhilHealth<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertPhilHealth(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Monthly_Basic_Salary_Into_Five = entity.Monthly_Basic_Salary_Into_Five,
+                    Monthly_Share = entity.Monthly_Share,
+                    Personal_Share = entity.Personal_Share,
+                    Employee_Share = entity.Employee_Share
+
+                };
+                return IMasterRepository.InsertPhilHealth(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdatePhilHealth(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Monthly_Basic_Salary_Into_Five = entity.Monthly_Basic_Salary_Into_Five,
+                    Monthly_Share = entity.Monthly_Share,
+                    Personal_Share = entity.Personal_Share,
+                    Employee_Share =entity.Employee_Share
+                };
+                return IMasterRepository.UpdatePhilHealth(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeletePhilHealth(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeletePhilHealth(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
+        public IEnumerable<dynamic> GetCompanyAdjustment()
+        {
+            try
+            {
+                return IMasterRepository.GetCompanyAdjustment<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public IEnumerable<dynamic> GetDepartment()
         {
             try
@@ -46,6 +126,73 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
+
+        public long InsertCompanyAdjustment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Type=entity.Type,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Amount=entity.Amount,
+                    Remarks = entity.Remarks,
+                    BeforeTax = entity.BeforeTax,
+                    Taxable =entity.Taxable,
+                    MaxAccumulated = entity.MaxAccumulated
+
+                };
+                return IMasterRepository.InsertCompanyAdjustment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateCompanyAdjustment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                { 
+                    ID=entity.ID,
+                    Type = entity.Type,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Remarks = entity.Remarks,
+                    Amount = entity.Amount,
+                    Taxable = entity.Taxable,
+                    MaxAccumulated = entity.MaxAccumulated
+
+                };
+                return IMasterRepository.UpdateCompanyAdjustment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCompanyAdjustment(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteCompanyAdjustment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
 
         public long InsertDepartment(MasterEntity entity)
         {
@@ -105,6 +252,7 @@ namespace FreshersApp.Business.Managers
                     Name = entity.Name,
                     Code = entity.Code,
                     Remarks = entity.Remarks,
+                   
                 };
                 return IMasterRepository.InsertCostcenter(filter);
             }
@@ -124,6 +272,9 @@ namespace FreshersApp.Business.Managers
                     Name = entity.Name,
                     Code = entity.Code,
                     Remarks = entity.Remarks,
+                    Changes = entity.Changes,
+                    ModifiedBy = entity.ModifiedBy
+
                 };
                 return IMasterRepository.UpdateCostcenter(filter);
             }
