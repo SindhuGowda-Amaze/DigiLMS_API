@@ -261,7 +261,7 @@ namespace FreshersApp.Business.Managers
                     Non_Tax_Essential_Sealing = entity.Non_Tax_Essential_Sealing,
                     Deminimis_Exemption = entity.Deminimis_Exemption
                 };
-                return IMasterRepository.InsertFoodSenseProjects(filter);
+                return IMasterRepository.InsertCompany_Profile(filter);
             }
             catch (Exception ex)
             {
@@ -284,19 +284,6 @@ namespace FreshersApp.Business.Managers
                     Photo = entity.PhotoURL
                 };
                 return IMasterRepository.InsertFoodSenseProjects(filter);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-
-        public IEnumerable<dynamic> GetOTRates()
-        {
-            try
-            {
-                return IMasterRepository.GetOTRates<dynamic>();
             }
             catch (Exception ex)
             {
@@ -355,6 +342,19 @@ namespace FreshersApp.Business.Managers
             try
             {
                 return IMasterRepository.DeleteOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public IEnumerable<dynamic> GetOTRates()
+        {
+            try
+            {
+                return IMasterRepository.GetOTRates<dynamic>();
             }
             catch (Exception ex)
             {

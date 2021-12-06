@@ -156,17 +156,7 @@ namespace FreshersApp.Data.Repositories
         }
 
 
-        public IEnumerable<T> GetOTRates<T>()
-        {
-            try
-            {
-                return db.Query<T>("[dbo].[SProc_GetOTRates]", commandType: CommandType.StoredProcedure);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
         public long InsertOTRates(object filter)
         {
             try
@@ -237,5 +227,19 @@ namespace FreshersApp.Data.Repositories
                 throw ex;
             }
         }
+
+        public IEnumerable<T> GetOTRates<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetOTRates]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

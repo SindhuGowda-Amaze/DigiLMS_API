@@ -105,6 +105,5 @@ C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\bin\Debug\SendGrid.C
 C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\bin\Debug\SendGrid.CSharp.HTTP.Client.dll.config
 C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\obj\Debug\FreshersApp.Business.csproj.AssemblyReference.cache
 C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\obj\Debug\FreshersApp.Business.csproj.CoreCompileInputs.cache
-C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\obj\Debug\FreshersApp.Business.csproj.CopyComplete
 C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\obj\Debug\Cotopaxi.Business.dll
 C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\obj\Debug\Cotopaxi.Business.pdb

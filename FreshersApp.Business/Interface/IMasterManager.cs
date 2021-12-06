@@ -32,7 +32,7 @@ namespace FreshersApp.Business.Interface
        
         Int64 DeleteFoodSenseProject(object filter);
 
-        IEnumerable<dynamic> GetOTRates();
+      
 
         Int64 InsertOTRates(MasterEntity entity);
 
@@ -53,6 +53,8 @@ namespace FreshersApp.Business.Interface
         Int64 InsertCompany_Profile(MasterEntity entity);
 
         Int64 DeleteCompanyProfile(object filter);
+
+        IEnumerable<dynamic> GetOTRates();
 
     }
 
