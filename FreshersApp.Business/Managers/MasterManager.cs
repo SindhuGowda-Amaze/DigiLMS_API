@@ -363,9 +363,6 @@ namespace FreshersApp.Business.Managers
         }
 
 
-<<<<<<< HEAD
-        public long InsertOTRates(MasterEntity entity)
-=======
         public IEnumerable<dynamic> GetBanks()
         {
             try
@@ -398,7 +395,6 @@ namespace FreshersApp.Business.Managers
         }
 
         public long UpdateBanks(MasterEntity entity)
->>>>>>> 83118110ee9ff26fbc01a1abdba02afa50078b2f
         {
             try
             {
@@ -559,34 +555,21 @@ namespace FreshersApp.Business.Managers
             }
         }
 
-<<<<<<< HEAD
-        public IEnumerable<dynamic> GetOTRates()
-        {
-            try
-            {
-                return IMasterRepository.GetOTRates<dynamic>();
-=======
         public long DeleteSSS(object filter)
         {
             try
             {
                 return IMasterRepository.DeleteSSS(filter);
->>>>>>> 83118110ee9ff26fbc01a1abdba02afa50078b2f
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-<<<<<<< HEAD
-
-
-=======
         public long InsertCompany_Profile(MasterEntity entity)
         {
             throw new NotImplementedException();
         }
->>>>>>> 83118110ee9ff26fbc01a1abdba02afa50078b2f
     }
 }
 

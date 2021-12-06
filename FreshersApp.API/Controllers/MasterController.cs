@@ -561,9 +561,6 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
-<<<<<<< HEAD
-      
-=======
         //[HttpPost]
         //[Route("Master/UpdateFoodSenseProject")]
         //public HttpResponseMessage UpdateFoodSenseProject(MasterEntity entity)
@@ -671,7 +668,6 @@ namespace FreshersApp.API.Controllers
         //}
 
 
->>>>>>> 83118110ee9ff26fbc01a1abdba02afa50078b2f
         [HttpGet]
         [Route("Master/GetSSS")]
         public HttpResponseMessage GetSSS()
