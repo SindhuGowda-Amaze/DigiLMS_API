@@ -8,11 +8,13 @@ namespace FreshersApp.Data.Interface
 {
     public interface IMasterRepository
     {
-       
-        IEnumerable<T>GetCostcenter<T>();
+
+        IEnumerable<T> GetCostcenter<T>();
+        IEnumerable<T>GetTaxtable<T>();
         Int64 InsertCostcenter(object filter);
         Int64 UpdateCostcenter(object filter);
         Int64 DeleteCostcenter(object filter);
+        
         IEnumerable<T>GetDepartment<T>();
         Int64 InsertDepartment(object filter);
         Int64 UpdateDepartment(object filter);

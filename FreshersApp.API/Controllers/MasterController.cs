@@ -39,6 +39,28 @@ namespace FreshersApp.API.Controllers
 
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
+
+        [HttpGet]
+        [Route("Master/GetTaxtable")]
+        public HttpResponseMessage GetTaxtable()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetTaxtable();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetTaxtable + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
         [HttpGet]
         [Route("Master/GetPhilHealth")]
         public HttpResponseMessage GetPhilHealth()

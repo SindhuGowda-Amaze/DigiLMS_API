@@ -11,7 +11,8 @@ namespace FreshersApp.Business.Interface
     {
 
         //GetCostCenter
-        IEnumerable<dynamic>GetCostcenter();
+        IEnumerable<dynamic> GetCostcenter();
+        IEnumerable<dynamic> GetTaxtable();
 
         Int64 InsertCostcenter(MasterEntity entity);
 

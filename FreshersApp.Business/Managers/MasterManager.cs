@@ -21,7 +21,17 @@ namespace FreshersApp.Business.Managers
 
         //getCostcenter and department
 
-
+        public IEnumerable<dynamic> GetTaxtable()
+        {
+            try
+            {
+                return IMasterRepository.GetTaxtable<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public IEnumerable<dynamic> GetCostcenter()
         {

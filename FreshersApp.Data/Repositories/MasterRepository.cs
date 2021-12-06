@@ -18,11 +18,23 @@ namespace FreshersApp.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T>GetPhilHealth<T>()
+        public IEnumerable<T> GetPhilHealth<T>()
         {
             try
             {
                 return db.Query<T>("[dbo].[SProc_GetPhilHealth]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetTaxtable<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetTaxtable]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
