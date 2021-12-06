@@ -134,3 +134,4 @@ D:\DigiNewAppWebAPISol\FreshersApp.Business\bin\Debug\Twilio.xml
 D:\DigiNewAppWebAPISol\FreshersApp.Business\bin\Debug\Dapper.xml
 D:\DigiNewAppWebAPISol\FreshersApp.Business\bin\Debug\SendGrid.CSharp.HTTP.Client.pdb
 D:\DigiNewAppWebAPISol\FreshersApp.Business\bin\Debug\SendGrid.CSharp.HTTP.Client.dll.config
+C:\Users\AI\Source\Repos\Digiofficeapi\FreshersApp.Business\obj\Debug\FreshersApp.Business.csproj.CopyComplete
