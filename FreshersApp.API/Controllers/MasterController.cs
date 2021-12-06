@@ -211,6 +211,177 @@ namespace FreshersApp.API.Controllers
         }
 
 
+        [HttpGet]
+        [Route("Master/GetBanks")]
+        public HttpResponseMessage GetBanks()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetBanks();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetBanks + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/InsertBanks")]
+        public HttpResponseMessage InsertBanks(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.InsertBanks(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in InsertBanks + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/UpdateBanks")]
+        public HttpResponseMessage UpdateBanks(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.UpdateBanks(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in UpdateBanks + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpGet]
+        [Route("Master/DeleteBanks")]
+        public HttpResponseMessage DeleteBanks(Int64 ID)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                var filter = new { ID = ID };
+                Int64 res = IMasterManager.DeleteBanks(filter);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in DeleteBanks + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+
+        [HttpGet]
+        [Route("Master/GetPayGroup")]
+        public HttpResponseMessage GetPayGroup()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetPayGroup();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetPayGroup + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/InsertPayGroup")]
+        public HttpResponseMessage InsertPayGroup(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.InsertPayGroup(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in InsertPayGroup + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/UpdatePayGroup")]
+        public HttpResponseMessage UpdatePayGroup(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.UpdatePayGroup(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in UpdatePayGroup + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpGet]
+        [Route("Master/DeletePayGroup")]
+        public HttpResponseMessage DeletePayGroup(Int64 ID)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                var filter = new { ID = ID };
+                Int64 res = IMasterManager.DeletePayGroup(filter);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in DeletePayGroup + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
 
 
 
@@ -390,26 +561,26 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
-        [HttpPost]
-        [Route("Master/UpdateFoodSenseProject")]
-        public HttpResponseMessage UpdateFoodSenseProject(MasterEntity entity)
-        {
-            HttpResponseMessage response;
-            try
-            {
-                object res = IMasterManager.UpdateFoodSenseProject(entity);
-                response = Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                if (log.IsErrorEnabled)
-                {
-                    log.Error("Error in UpdateFoodSenseProject + ex");
-                }
-                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-            }
-            return response;
-        }
+        //[HttpPost]
+        //[Route("Master/UpdateFoodSenseProject")]
+        //public HttpResponseMessage UpdateFoodSenseProject(MasterEntity entity)
+        //{
+        //    HttpResponseMessage response;
+        //    try
+        //    {
+        //        object res = IMasterManager.UpdateFoodSenseProject(entity);
+        //        response = Request.CreateResponse(HttpStatusCode.OK, res);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        if (log.IsErrorEnabled)
+        //        {
+        //            log.Error("Error in UpdateFoodSenseProject + ex");
+        //        }
+        //        response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+        //    }
+        //    return response;
+        //}
 
 
         [HttpGet]

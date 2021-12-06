@@ -33,6 +33,17 @@ namespace FreshersApp.Data.Interface
          Int64 UpdateOTRates(object filter);
         Int64 DeleteOTRates(object filter);
 
+        IEnumerable<T> GetBanks<T>();
+        Int64 InsertBanks(object filter);
+        Int64 UpdateBanks(object filter);
+        Int64 DeleteBanks(object filter);
+
+
+        IEnumerable<T> GetPayGroup<T>();
+        Int64 InsertPayGroup(object filter);
+        Int64 UpdatePayGroup(object filter);
+        Int64 DeletePayGroup(object filter);
+
 
     }
 

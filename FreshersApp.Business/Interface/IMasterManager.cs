@@ -54,6 +54,24 @@ namespace FreshersApp.Business.Interface
 
         Int64 DeleteCompanyProfile(object filter);
 
+
+        IEnumerable<dynamic> GetBanks();
+
+        Int64 InsertBanks(MasterEntity entity);
+
+        Int64 UpdateBanks(MasterEntity entity);
+
+        Int64 DeleteBanks(object filter);
+
+
+        IEnumerable<dynamic> GetPayGroup();
+
+        Int64 InsertPayGroup(MasterEntity entity);
+
+        Int64 UpdatePayGroup(MasterEntity entity);
+
+        Int64 DeletePayGroup(object filter);
+
     }
 
 }
