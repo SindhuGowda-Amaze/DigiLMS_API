@@ -283,7 +283,7 @@ namespace FreshersApp.Business.Managers
                     Highlights = entity.Highlights,
                     Photo = entity.PhotoURL
                 };
-                return IMasterRepository.InsertFoodSenseProjects(filter);
+                return IMasterRepository.InsertCompany_Profile(filter);
             }
             catch (Exception ex)
             {
@@ -486,11 +486,86 @@ namespace FreshersApp.Business.Managers
             }
         }
 
+        public IEnumerable<dynamic> GetSSS()
+        {
+            try
+            {
+                return IMasterRepository.GetSSS<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertSSS(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Min_Range=entity.Min_Range,
+                    Max_Range = entity.Max_Range,
+                    Monthly_Salary_Creadited = entity.Monthly_Salary_Creadited,
+                    SS_ER = entity.SS_ER,
+                    SS_EE = entity.SS_EE,
+                    SS_Total = entity.SS_Total,
+                    MPF_ER = entity.MPF_ER,
+                    MPF_EE = entity.MPF_EE,
+                    EC_ER = entity.EC_ER,
+                    Total_Contribution = entity.Total_Contribution
+
+                };
+                return IMasterRepository.InsertSSS(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public long InsertOTRates(MasterEntity entity)
         {
             throw new NotImplementedException();
         }
 
+        public long UpdateSSS(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    Min_Range = entity.Min_Range,
+                    Max_Range = entity.Max_Range,
+                    Monthly_Salary_Creadited = entity.Monthly_Salary_Creadited,
+                    SS_ER = entity.SS_ER,
+                    SS_EE = entity.SS_EE,
+                    SS_Total = entity.SS_Total,
+                    MPF_ER = entity.MPF_ER,
+                    MPF_EE = entity.MPF_EE,
+                    EC_ER = entity.EC_ER,
+                    Total_Contribution = entity.Total_Contribution
+                };
+                return IMasterRepository.UpdateSSS(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteSSS(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteSSS(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public long InsertCompany_Profile(MasterEntity entity)
         {
             throw new NotImplementedException();

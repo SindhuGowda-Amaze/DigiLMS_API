@@ -43,16 +43,20 @@ namespace FreshersApp.Business.Interface
 
 
 
-
-
-
-
-
         IEnumerable<dynamic> GetCompanyProfile();
 
         Int64 InsertCompany_Profile(MasterEntity entity);
 
         Int64 DeleteCompanyProfile(object filter);
+
+
+        IEnumerable<dynamic> GetSSS();
+
+        Int64 InsertSSS(MasterEntity entity);
+
+        Int64 UpdateSSS(MasterEntity entity);
+
+        Int64 DeleteSSS(object filter);
 
 
         IEnumerable<dynamic> GetBanks();
