@@ -236,18 +236,7 @@ namespace FreshersApp.Data.Repositories
             }
         }
 
-
-        public long UpdateFoodSenseProject(object filter)
-        {
-            try
-            {
-                return db.Query<Int64>("[dbo].[SProc_UpdateFoodSenseProject]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+ 
 
         public long DeleteFoodSenseProject(object filter)
         {
@@ -261,5 +250,228 @@ namespace FreshersApp.Data.Repositories
             }
         }
 
+
+        
+        public long InsertOTRates(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertOTRates]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdateOTRates(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateOTRates]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeleteOTRates(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteOTRates]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public IEnumerable<T> GetCompanyProfile<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetCompanyProfile]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertCompany_Profile(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertCompany_Profile]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCompanyProfile(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteCompanyProfile]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetOTRates<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetOTRates]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetBanks<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[Spro_GetBanks]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertBanks(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_InsertBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdateBanks(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_UpdateBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeleteBanks(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_DeleteBanks]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public IEnumerable<T> GetPayGroup<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[Spro_GetPayGroup]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertPayGroup(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_InsertPayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long UpdatePayGroup(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_UpdatePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long DeletePayGroup(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[Sproc_DeletePayGroup]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetSSS<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetSSS]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertSSS(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertSSS]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateSSS(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateSSS]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteSSS(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteSSS]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

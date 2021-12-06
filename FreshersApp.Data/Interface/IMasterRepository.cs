@@ -32,8 +32,37 @@ namespace FreshersApp.Data.Interface
 
         IEnumerable<T> GetFoodSenseProjects<T>();
         Int64 InsertFoodSenseProjects(object filter);
-        Int64 UpdateFoodSenseProject(object filter);
+
         Int64 DeleteFoodSenseProject(object filter);
+
+
+        IEnumerable<T> GetCompanyProfile<T>();
+        Int64 InsertCompany_Profile(object filter);
+        Int64 DeleteCompanyProfile(object filter);
+
+        IEnumerable<T> GetOTRates<T>();
+        Int64 InsertOTRates(object filter); 
+         Int64 UpdateOTRates(object filter);
+        Int64 DeleteOTRates(object filter);
+
+        IEnumerable<T> GetBanks<T>();
+        Int64 InsertBanks(object filter);
+        Int64 UpdateBanks(object filter);
+        Int64 DeleteBanks(object filter);
+
+
+        IEnumerable<T> GetPayGroup<T>();
+        Int64 InsertPayGroup(object filter);
+        Int64 UpdatePayGroup(object filter);
+        Int64 DeletePayGroup(object filter);
+
+
+        IEnumerable<T> GetSSS<T>();
+        Int64 InsertSSS(object filter);
+        Int64 UpdateSSS(object filter);
+        Int64 DeleteSSS(object filter);
+
+
     }
 
 }
