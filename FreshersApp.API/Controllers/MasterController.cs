@@ -40,6 +40,132 @@ namespace FreshersApp.API.Controllers
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         [HttpGet]
+        [Route("Master/GetPhilHealth")]
+        public HttpResponseMessage GetPhilHealth()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetPhilHealth();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetPhilHealth + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/InsertPhilHealth")]
+        public HttpResponseMessage InsertPhilHealth(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.InsertPhilHealth(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in InsertPhilHealth + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+        [HttpPost]
+        [Route("Master/UpdatePhilHealth")]
+        public HttpResponseMessage UpdatePhilHealth(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.UpdatePhilHealth(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in UpdatePhilHealth + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+
+        [HttpGet]
+        [Route("Master/DeletePhilHealth")]
+        public HttpResponseMessage DeletePhilHealth(Int64 ID)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                var filter = new { ID = ID };
+                Int64 res = IMasterManager.DeletePhilHealth(filter);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in DeletePhilHealth + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpGet]
+        [Route("Master/DeleteCompanyAdjustment")]
+        public HttpResponseMessage DeleteCompanyAdjustment(Int64 ID)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                var filter = new { ID = ID };
+                Int64 res = IMasterManager.DeleteCompanyAdjustment(filter);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in DeleteCompanyAdjustment + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        [HttpGet]
         [Route("Master/GetDepartment")]
         public HttpResponseMessage GetDepartment()
         {
@@ -125,8 +251,48 @@ namespace FreshersApp.API.Controllers
         }
 
 
+        [HttpGet]
+        [Route("Master/GetCompanyAdjustment")]
+        public HttpResponseMessage GetCompanyAdjustment()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetCompanyAdjustment();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetCompanyAdjustment + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
 
 
+        [HttpPost]
+        [Route("Master/InsertCompanyAdjustment")]
+        public HttpResponseMessage InsertCompanyAdjustment(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.InsertCompanyAdjustment(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in InsertCompanyAdjustment + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
 
 
 
