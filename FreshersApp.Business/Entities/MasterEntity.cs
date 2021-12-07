@@ -131,10 +131,74 @@ namespace FreshersApp.Business.Entities
 		public Int64 MPF_EE { get; set; }
 		public Int64 EC_ER { get; set; }
 		public Int64 Total_Contribution { get; set; }
+
+
+		public string EmployeeID { get; set; }
+		public string LastName { get; set; }
+		public string FirstName { get; set; }
+		public string MiddleName { get; set; }
+		public string Gender { get; set; }
+		public DateTime DOB { get; set; }
+		public string CivilStatus { get; set; }
+		public string ContactNo { get; set; }
+		public string HomeAddress { get; set; }
+		
+		public string Username { get; set; }
 	
-
-
-
+		public bool LockUser { get; set; }
+		public string TaxStatus { get; set; }
+		public bool MinimumWagesEarned { get; set; }
+		public float COLA { get; set; }
+		public float WorkdaysPerYear { get; set; }
+		public float basicSalary { get; set; }
+		public float Deminimis { get; set; }
+		public string OT_ComputationTable { get; set; }
+		public string SSS_Contribution { get; set; }
+		public string PhilHealth_Contribution { get; set; }
+		public string HDMF_Contribution { get; set; }
+		public float Additional_HDMF_Contibution { get; set; }
+		public string JobTitle { get; set; }
+		public string Department { get; set; }
+		public string CostCenter { get; set; }
+		public DateTime HireDate { get; set; }
+		public DateTime StatusDate { get; set; }
+		public string Employment_Status { get; set; }
+		public float Work_Hours_Per_Day { get; set; }
+		public string Pay_Group { get; set; }
+		public bool ROHQ { get; set; }
+		public bool Consultant { get; set; }
+		public string Consultant_Tax { get; set; }
+		public string Consultant_TaxNum { get; set; }
+	
+		public string PhilHealth_No { get; set; }
+		public string SSS_No { get; set; }
+		public string HDMF_No { get; set; }
+		public float SL { get; set; }
+		public float VL { get; set; }
+		public float LeaveCredit { get; set; }
+		public string Dependent1 { get; set; }
+		public DateTime Dependent1_DOB { get; set; }
+		public string @Dependent2 { get; set; }
+		public DateTime Dependent2_DOB { get; set; }
+		public string @Dependent3 { get; set; }
+		public DateTime Dependent3_DOB { get; set; }
+		public string @Dependent4 { get; set; }
+		public DateTime Dependent4_DOB { get; set; }
+		public string bank { get; set; }
+		public string bank_AccountType { get; set; }
+		public string bank_AccountNo { get; set; }
+		public bool HasPreviousEmployment { get; set; }
+		public float NonTax_13thMonth { get; set; }
+		public float NonTax_OtherBonus { get; set; }
+		public float NonTax_Salaries { get; set; }
+		public float ThirteenthMonth { get; set; }
+		public float OtherBonus { get; set; }
+		public float TaxableGross { get; set; }
+		public float Tax_Withheld { get; set; }
+		public float GovernmentDeductions { get; set; }
+		public float PreviousEmployment_Deminimis { get; set; }
+		public float TaxableCompensation { get; set; }
+		public float MonetizedLeave { get; set; }
 
 	}
 }

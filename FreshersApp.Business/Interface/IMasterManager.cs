@@ -91,6 +91,16 @@ namespace FreshersApp.Business.Interface
 
         IEnumerable<dynamic> GetOTRates();
 
+
+
+        IEnumerable<dynamic> GetEmployeeInformation();
+
+        Int64 InsertEmployeeInformation(MasterEntity entity);
+
+        Int64 UpdateEmployeeInformation(MasterEntity entity);
+
+        Int64 DeleteEmployeeInformation(object filter);
+
     }
 
 }

@@ -64,6 +64,11 @@ namespace FreshersApp.Data.Interface
         Int64 UpdateSSS(object filter);
         Int64 DeleteSSS(object filter);
 
+        IEnumerable<T> GetEmployeeInformation<T>();
+        Int64 InsertEmployeeInformation(object filter);
+        Int64 UpdateEmployeeInformation(object filter);
+        Int64 DeleteEmployeeInformation(object filter);
+
 
     }
 

@@ -86,7 +86,7 @@ namespace FreshersApp.Business.Managers
                     Monthly_Basic_Salary_Into_Five = entity.Monthly_Basic_Salary_Into_Five,
                     Monthly_Share = entity.Monthly_Share,
                     Personal_Share = entity.Personal_Share,
-                    Employee_Share =entity.Employee_Share
+                    Employee_Share = entity.Employee_Share
                 };
                 return IMasterRepository.UpdatePhilHealth(filter);
             }
@@ -143,13 +143,13 @@ namespace FreshersApp.Business.Managers
             {
                 var filter = new
                 {
-                    Type=entity.Type,
+                    Type = entity.Type,
                     Name = entity.Name,
                     Code = entity.Code,
-                    Amount=entity.Amount,
+                    Amount = entity.Amount,
                     Remarks = entity.Remarks,
                     BeforeTax = entity.BeforeTax,
-                    Taxable =entity.Taxable,
+                    Taxable = entity.Taxable,
                     MaxAccumulated = entity.MaxAccumulated
 
                 };
@@ -166,8 +166,8 @@ namespace FreshersApp.Business.Managers
             try
             {
                 var filter = new
-                { 
-                    ID=entity.ID,
+                {
+                    ID = entity.ID,
                     Type = entity.Type,
                     Name = entity.Name,
                     Code = entity.Code,
@@ -262,7 +262,7 @@ namespace FreshersApp.Business.Managers
                     Name = entity.Name,
                     Code = entity.Code,
                     Remarks = entity.Remarks,
-                   
+
                 };
                 return IMasterRepository.InsertCostcenter(filter);
             }
@@ -430,7 +430,7 @@ namespace FreshersApp.Business.Managers
         //    }
         //}
 
-        public long InsertFoodSenseProjects(MasterEntity entity)
+        public long InsertCompany_Profile(MasterEntity entity)
         {
             try
             {
@@ -513,27 +513,27 @@ namespace FreshersApp.Business.Managers
         }
 
 
-        //public long InsertOTRates(MasterEntity entity)
-        //{
-        //    try
-        //    {
-        //        var filter = new
-        //        {
-        //            Day = entity.Day,
-        //            Normal = entity.Normal,
-        //            OT = entity.OT,
-        //            ND = entity.ND,
-        //            NDOT = entity.NDOT,
-        //            ModifiedBy = entity.ModifiedBy,
-                
-        //        };
-        //        return IMasterRepository.InsertOTRates(filter);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
+        public long InsertOTRates(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Day = entity.Day,
+                    Normal = entity.Normal,
+                    OT = entity.OT,
+                    ND = entity.ND,
+                    NDOT = entity.NDOT,
+                    ModifiedBy = entity.ModifiedBy,
+
+                };
+                return IMasterRepository.InsertOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public long UpdateOTRates(MasterEntity entity)
         {
@@ -653,7 +653,7 @@ namespace FreshersApp.Business.Managers
             {
                 var filter = new
                 {
-                    
+
                     Description = entity.Description
                 };
                 return IMasterRepository.InsertPayGroup(filter);
@@ -712,7 +712,7 @@ namespace FreshersApp.Business.Managers
             {
                 var filter = new
                 {
-                    Min_Range=entity.Min_Range,
+                    Min_Range = entity.Min_Range,
                     Max_Range = entity.Max_Range,
                     Monthly_Salary_Creadited = entity.Monthly_Salary_Creadited,
                     SS_ER = entity.SS_ER,
@@ -731,10 +731,7 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
-        public long InsertOTRates(MasterEntity entity)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public long UpdateSSS(MasterEntity entity)
         {
@@ -774,7 +771,339 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
-        public long InsertCompany_Profile(MasterEntity entity)
+
+
+        public IEnumerable<dynamic> GetEmployeeInformation()
+        {
+            try
+            {
+                return IMasterRepository.GetEmployeeInformation<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertEmployeeInformation(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+
+                    EmployeeID = entity.EmployeeID,
+
+                    LastName = entity.LastName,
+
+                    FirstName = entity.FirstName,
+
+                    MiddleName = entity.MiddleName,
+
+                    Gender = entity.Gender,
+
+                    DOB = entity.DOB,
+
+                    CivilStatus = entity.CivilStatus,
+
+                    ContactNo = entity.ContactNo,
+
+                    HomeAddress = entity.HomeAddress,
+
+                    Zipcode = entity.Zipcode,
+
+                    Email = entity.Email,
+
+                    Username = entity.Username,
+
+                    Password = entity.Password,
+
+                    LockUser = entity.LockUser,
+
+                    TaxStatus = entity.TaxStatus,
+
+                    MinimumWagesEarned = entity.MinimumWagesEarned,
+
+                    COLA = entity.COLA,
+
+                    WorkdaysPerYear = entity.WorkdaysPerYear,
+
+                    BasicSalary = entity.basicSalary,
+
+                    Deminimis = entity.Deminimis,
+
+                    OT_ComputationTable = entity.OT_ComputationTable,
+
+                    SSS_Contribution = entity.SSS_Contribution,
+
+                    PhilHealth_Contribution = entity.PhilHealth_Contribution,
+
+                    HDMF_Contribution = entity.HDMF_Contribution,
+
+                    Additional_HDMF_Contibution = entity.Additional_HDMF_Contibution,
+
+                    JobTitle = entity.JobTitle,
+
+                    Department = entity.Department,
+
+                    CostCenter = entity.CostCenter,
+
+                    HireDate = entity.HireDate,
+
+                    Employment_Status = entity.Employment_Status,
+
+                    StatusDate = entity.StatusDate,
+
+                    Work_Hours_Per_Day = entity.Work_Hours_Per_Day,
+
+                    Pay_Group = entity.Pay_Group,
+
+                    ROHQ = entity.ROHQ,
+
+                    Consultant = entity.Consultant,
+
+                    Consultant_Tax = entity.Consultant_Tax,
+
+                    Consultant_TaxNum = entity.Consultant_TaxNum,
+
+                    Tin = entity.Tin,
+
+                    RDO = entity.RDO,
+
+                    PhilHealth_No = entity.PhilHealth_No,
+
+                    SSS_No = entity.SSS_No,
+
+                    HDMF_No = entity.HDMF_No,
+
+                    SL = entity.SL,
+
+                    VL = entity.VL,
+
+                    LeaveCredit = entity.LeaveCredit,
+
+                    Dependent1 = entity.Dependent1,
+
+                    Dependent1_DOB = entity.Dependent1_DOB,
+
+                    Dependent2 = entity.Dependent2,
+
+                    Dependent2_DOB = entity.Dependent2_DOB,
+
+                    Dependent3 = entity.Dependent3,
+
+                    Dependent3_DOB = entity.Dependent3_DOB,
+
+                    Dependent4 = entity.Dependent4,
+
+                    Dependent4_DOB = entity.Dependent4_DOB,
+
+                    Bank = entity.bank,
+
+                    Bank_AccountType = entity.bank_AccountType,
+
+                    Bank_AccountNo = entity.bank_AccountNo,
+
+                    HasPreviousEmployment = entity.HasPreviousEmployment,
+
+                    NonTax_13thMonth = entity.NonTax_13thMonth,
+
+                    NonTax_OtherBonus = entity.NonTax_OtherBonus,
+
+                    NonTax_Salaries = entity.NonTax_Salaries,
+
+                    ThirteenthMonth = entity.ThirteenthMonth,
+
+                    OtherBonus = entity.OtherBonus,
+
+                    TaxableGross = entity.TaxableGross,
+
+                    Tax_Withheld = entity.Tax_Withheld,
+
+                    GovernmentDeductions = entity.GovernmentDeductions,
+
+                    PreviousEmployment_Deminimis = entity.PreviousEmployment_Deminimis,
+
+                    TaxableCompensation = entity.TaxableCompensation,
+
+                    MonetizedLeave = entity.MonetizedLeave
+
+
+                };
+                return IMasterRepository.InsertEmployeeInformation(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateEmployeeInformation(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    EmployeeID = entity.EmployeeID,
+
+                    LastName = entity.LastName,
+
+                    FirstName = entity.FirstName,
+
+                    MiddleName = entity.MiddleName,
+
+                    Gender = entity.Gender,
+
+                    DOB = entity.DOB,
+
+                    CivilStatus = entity.CivilStatus,
+
+                    ContactNo = entity.ContactNo,
+
+                    HomeAddress = entity.HomeAddress,
+
+                    Zipcode = entity.Zipcode,
+
+                    Email = entity.Email,
+
+                    Username = entity.Username,
+
+                    Password = entity.Password,
+
+                    LockUser = entity.LockUser,
+
+                    TaxStatus = entity.TaxStatus,
+
+                    MinimumWagesEarned = entity.MinimumWagesEarned,
+
+                    COLA = entity.COLA,
+
+                    WorkdaysPerYear = entity.WorkdaysPerYear,
+
+                    BasicSalary = entity.basicSalary,
+
+                    Deminimis = entity.Deminimis,
+
+                    OT_ComputationTable = entity.OT_ComputationTable,
+
+                    SSS_Contribution = entity.SSS_Contribution,
+
+                    PhilHealth_Contribution = entity.PhilHealth_Contribution,
+
+                    HDMF_Contribution = entity.HDMF_Contribution,
+
+                    Additional_HDMF_Contibution = entity.Additional_HDMF_Contibution,
+
+                    JobTitle = entity.JobTitle,
+
+                    Department = entity.Department,
+
+                    CostCenter = entity.CostCenter,
+
+                    HireDate = entity.HireDate,
+
+                    Employment_Status = entity.Employment_Status,
+
+                    StatusDate = entity.StatusDate,
+
+                    Work_Hours_Per_Day = entity.Work_Hours_Per_Day,
+
+                    Pay_Group = entity.Pay_Group,
+
+                    ROHQ = entity.ROHQ,
+
+                    Consultant = entity.Consultant,
+
+                    Consultant_Tax = entity.Consultant_Tax,
+
+                    Consultant_TaxNum = entity.Consultant_TaxNum,
+
+                    Tin = entity.Tin,
+
+                    RDO = entity.RDO,
+
+                    PhilHealth_No = entity.PhilHealth_No,
+
+                    SSS_No = entity.SSS_No,
+
+                    HDMF_No = entity.HDMF_No,
+
+                    SL = entity.SL,
+
+                    VL = entity.VL,
+
+                    LeaveCredit = entity.LeaveCredit,
+
+                    Dependent1 = entity.Dependent1,
+
+                    Dependent1_DOB = entity.Dependent1_DOB,
+
+                    Dependent2 = entity.Dependent2,
+
+                    Dependent2_DOB = entity.Dependent2_DOB,
+
+                    Dependent3 = entity.Dependent3,
+
+                    Dependent3_DOB = entity.Dependent3_DOB,
+
+                    Dependent4 = entity.Dependent4,
+
+                    Dependent4_DOB = entity.Dependent4_DOB,
+
+                    Bank = entity.bank,
+
+                    Bank_AccountType = entity.bank_AccountType,
+
+                    Bank_AccountNo = entity.bank_AccountNo,
+
+                    HasPreviousEmployment = entity.HasPreviousEmployment,
+
+                    NonTax_13thMonth = entity.NonTax_13thMonth,
+
+                    NonTax_OtherBonus = entity.NonTax_OtherBonus,
+
+                    NonTax_Salaries = entity.NonTax_Salaries,
+
+                    ThirteenthMonth = entity.ThirteenthMonth,
+
+                    OtherBonus = entity.OtherBonus,
+
+                    TaxableGross = entity.TaxableGross,
+
+                    Tax_Withheld = entity.Tax_Withheld,
+
+                    GovernmentDeductions = entity.GovernmentDeductions,
+
+                    PreviousEmployment_Deminimis = entity.PreviousEmployment_Deminimis,
+
+                    TaxableCompensation = entity.TaxableCompensation,
+
+                    MonetizedLeave = entity.MonetizedLeave
+
+                };
+                return IMasterRepository.UpdateEmployeeInformation(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteEmployeeInformation(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteEmployeeInformation(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertFoodSenseProjects(MasterEntity entity)
         {
             throw new NotImplementedException();
         }

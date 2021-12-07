@@ -485,5 +485,53 @@ namespace FreshersApp.Data.Repositories
                 throw ex;
             }
         }
+
+        public IEnumerable<T> GetEmployeeInformation<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetEmployeeInformation]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertEmployeeInformation(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertEmployeeInformation]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateEmployeeInformation(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateEmployeeInformation]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteEmployeeInformation(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteEmployeeInformation]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
