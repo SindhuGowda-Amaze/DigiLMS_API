@@ -570,6 +570,94 @@ namespace FreshersApp.Business.Managers
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<dynamic> GetGovernmentRecords()
+        {
+            try
+            {
+                return IMasterRepository.GetGovernmentRecords<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertGovernmentRecords(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    
+                    SSS_Number = entity.SSS_Number,
+                    SSS_DatePaid = entity.SSS_DatePaid,
+                    SSSLoan_Number = entity.SSSLoan_Number,
+                    SSSLoan_DatePaid = entity.SSSLoan_DatePaid,
+                    SSSCalamityLoan_Number = entity.SSSCalamityLoan_Number,
+                    SSSCalamityLoan_DatePaid = entity.SSSCalamityLoan_DatePaid,
+                    PhilHealth_Number = entity.PhilHealth_Number,
+                    PhilHealth_DatePaid = entity.PhilHealth_DatePaid,
+                    HDMF_Number = entity.HDMF_Number,
+                    HDMF_DatePaid = entity.HDMF_DatePaid,
+                    HDMFLoan_Number = entity.HDMFLoan_Number,
+                    HDMFLoan_DatePaid = entity.HDMFLoan_DatePaid,
+                    HDMPCalamityLoan_Number = entity.HDMPCalamityLoan_Number,
+                    HDMPCalamityLoan_DatePaid = entity.HDMPCalamityLoan_DatePaid
+
+                };
+                return IMasterRepository.InsertGovernmentRecords(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+       
+
+        public long UpdateGovernmentRecords(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+
+                    SSS_Number = entity.SSS_Number,
+                    SSS_DatePaid = entity.SSS_DatePaid,
+                    SSSLoan_Number = entity.SSSLoan_Number,
+                    SSSLoan_DatePaid = entity.SSSLoan_DatePaid,
+                    SSSCalamityLoan_Number = entity.SSSCalamityLoan_Number,
+                    SSSCalamityLoan_DatePaid = entity.SSSCalamityLoan_DatePaid,
+                    PhilHealth_Number = entity.PhilHealth_Number,
+                    PhilHealth_DatePaid = entity.PhilHealth_DatePaid,
+                    HDMF_Number = entity.HDMF_Number,
+                    HDMF_DatePaid = entity.HDMF_DatePaid,
+                    HDMFLoan_Number = entity.HDMFLoan_Number,
+                    HDMFLoan_DatePaid = entity.HDMFLoan_DatePaid,
+                    HDMPCalamityLoan_Number = entity.HDMPCalamityLoan_Number,
+                    HDMPCalamityLoan_DatePaid = entity.HDMPCalamityLoan_DatePaid
+
+                };
+                return IMasterRepository.UpdateGovernmentRecords(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteGovernmentRecords(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteGovernmentRecords(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
 

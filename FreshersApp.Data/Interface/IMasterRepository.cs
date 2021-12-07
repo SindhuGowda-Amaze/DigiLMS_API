@@ -51,6 +51,12 @@ namespace FreshersApp.Data.Interface
         Int64 DeleteSSS(object filter);
 
 
+        IEnumerable<T> GetGovernmentRecords<T>();
+        Int64 InsertGovernmentRecords(object filter);
+        Int64 UpdateGovernmentRecords(object filter);
+        Int64 DeleteGovernmentRecords(object filter);
+
+
     }
 
 }

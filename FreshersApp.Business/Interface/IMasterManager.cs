@@ -59,6 +59,16 @@ namespace FreshersApp.Business.Interface
         Int64 DeleteSSS(object filter);
 
 
+        IEnumerable<dynamic> GetGovernmentRecords();
+
+        Int64 InsertGovernmentRecords(MasterEntity entity);
+
+        Int64 UpdateGovernmentRecords(MasterEntity entity);
+
+        Int64 DeleteGovernmentRecords(object filter);
+
+
+
         IEnumerable<dynamic> GetBanks();
 
         Int64 InsertBanks(MasterEntity entity);

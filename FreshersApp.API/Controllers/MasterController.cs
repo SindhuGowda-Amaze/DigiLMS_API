@@ -383,6 +383,91 @@ namespace FreshersApp.API.Controllers
         }
 
 
+        [HttpGet]
+        [Route("Master/GetGovernmentRecords")]
+        public HttpResponseMessage GetGovernmentRecords()
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.GetGovernmentRecords();
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in GetGovernmentRecords + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/InsertGovernmentRecords")]
+        public HttpResponseMessage InsertGovernmentRecords(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.InsertGovernmentRecords(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in InsertGovernmentRecords + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpPost]
+        [Route("Master/UpdateGovernmentRecords")]
+        public HttpResponseMessage UpdateGovernmentRecords(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.UpdateGovernmentRecords(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in UpdateGovernmentRecords + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+        [HttpGet]
+        [Route("Master/DeleteGovernmentRecords")]
+        public HttpResponseMessage DeleteGovernmentRecords(Int64 ID)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                var filter = new { ID = ID };
+                Int64 res = IMasterManager.DeleteGovernmentRecords(filter);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in DeleteGovernmentRecords + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
 
 
 
