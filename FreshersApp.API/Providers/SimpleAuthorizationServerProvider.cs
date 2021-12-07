@@ -8,12 +8,13 @@ namespace FreshersApp.API.Providers
 {
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
-        public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
-        {
-            context.Validated();
-        }
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context) => context.Validated();
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
 
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             //context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
             //using (UserRepository _repo = new UserRepository())

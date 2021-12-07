@@ -148,23 +148,6 @@ namespace FreshersApp.API.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         [HttpGet]
         [Route("Master/GetDepartment")]
         public HttpResponseMessage GetDepartment()

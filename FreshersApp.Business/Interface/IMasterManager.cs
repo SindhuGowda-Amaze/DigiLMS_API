@@ -27,7 +27,7 @@ namespace FreshersApp.Business.Interface
         Int64 UpdateCompanyAdjustment(MasterEntity entity);
         Int64 DeleteCompanyAdjustment(object filter);
 
-        IEnumerable<dynamic>GetPhilHealth();
+        IEnumerable<dynamic> GetPhilHealth();
         Int64 InsertPhilHealth(MasterEntity entity);
         Int64 UpdatePhilHealth(MasterEntity entity);
         Int64 DeletePhilHealth(object filter);

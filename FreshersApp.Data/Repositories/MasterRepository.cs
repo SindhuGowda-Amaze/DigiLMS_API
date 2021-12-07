@@ -22,7 +22,7 @@ namespace FreshersApp.Data.Repositories
         {
             try
             {
-                return db.Query<T>("[dbo].[SProc_GetPhilHealth]", commandType: CommandType.StoredProcedure);
+                return db.Query<T>("[dbo].[SProc_GetPhilHealth]",commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
