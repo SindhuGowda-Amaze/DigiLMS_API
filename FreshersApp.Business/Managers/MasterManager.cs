@@ -21,7 +21,17 @@ namespace FreshersApp.Business.Managers
 
         //getCostcenter and department
 
-
+        public IEnumerable<dynamic> GetTaxtable()
+        {
+            try
+            {
+                return IMasterRepository.GetTaxtable<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public IEnumerable<dynamic> GetCostcenter()
         {
@@ -35,6 +45,86 @@ namespace FreshersApp.Business.Managers
             }
         }
 
+        public IEnumerable<dynamic> GetPhilHealth()
+        {
+            try
+            {
+                return IMasterRepository.GetPhilHealth<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public long InsertPhilHealth(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Monthly_Basic_Salary_Into_Five = entity.Monthly_Basic_Salary_Into_Five,
+                    Monthly_Share = entity.Monthly_Share,
+                    Personal_Share = entity.Personal_Share,
+                    Employee_Share = entity.Employee_Share
+
+                };
+                return IMasterRepository.InsertPhilHealth(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdatePhilHealth(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    ID = entity.ID,
+                    Monthly_Basic_Salary_Into_Five = entity.Monthly_Basic_Salary_Into_Five,
+                    Monthly_Share = entity.Monthly_Share,
+                    Personal_Share = entity.Personal_Share,
+                    Employee_Share =entity.Employee_Share
+                };
+                return IMasterRepository.UpdatePhilHealth(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeletePhilHealth(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeletePhilHealth(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
+        public IEnumerable<dynamic> GetCompanyAdjustment()
+        {
+            try
+            {
+                return IMasterRepository.GetCompanyAdjustment<dynamic>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public IEnumerable<dynamic> GetDepartment()
         {
             try
@@ -46,6 +136,73 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
+
+        public long InsertCompanyAdjustment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Type=entity.Type,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Amount=entity.Amount,
+                    Remarks = entity.Remarks,
+                    BeforeTax = entity.BeforeTax,
+                    Taxable =entity.Taxable,
+                    MaxAccumulated = entity.MaxAccumulated
+
+                };
+                return IMasterRepository.InsertCompanyAdjustment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateCompanyAdjustment(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                { 
+                    ID=entity.ID,
+                    Type = entity.Type,
+                    Name = entity.Name,
+                    Code = entity.Code,
+                    Remarks = entity.Remarks,
+                    Amount = entity.Amount,
+                    Taxable = entity.Taxable,
+                    MaxAccumulated = entity.MaxAccumulated
+
+                };
+                return IMasterRepository.UpdateCompanyAdjustment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteCompanyAdjustment(object filter)
+        {
+            try
+            {
+                return IMasterRepository.DeleteCompanyAdjustment(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
 
         public long InsertDepartment(MasterEntity entity)
         {
@@ -105,6 +262,7 @@ namespace FreshersApp.Business.Managers
                     Name = entity.Name,
                     Code = entity.Code,
                     Remarks = entity.Remarks,
+                   
                 };
                 return IMasterRepository.InsertCostcenter(filter);
             }
@@ -124,6 +282,9 @@ namespace FreshersApp.Business.Managers
                     Name = entity.Name,
                     Code = entity.Code,
                     Remarks = entity.Remarks,
+                    Changes = entity.Changes,
+                    ModifiedBy = entity.ModifiedBy
+
                 };
                 return IMasterRepository.UpdateCostcenter(filter);
             }
@@ -275,13 +436,60 @@ namespace FreshersApp.Business.Managers
             {
                 var filter = new
                 {
-                    ProjectTypeID = entity.@ProjectTypeID,
-                    ProjectName = entity.ProjectName,
-                    ProjectDescription = entity.ProjectDescription,
-                    ClientName = entity.ClientName,
-                    ClientLocation = entity.ClientLocation,
-                    Highlights = entity.Highlights,
-                    Photo = entity.PhotoURL
+                    Company_logo = entity.Company_logo,
+                    Company_Name = entity.Company_Name,
+                    Nature_Of_Business = entity.Nature_Of_Business,
+                    Address1 = entity.Address1,
+                    Address2 = entity.Address2,
+                    Zipcode = entity.Zipcode,
+                    RDO = entity.RDO,
+                    Email = entity.Email,
+                    Phone = entity.Phone,
+                    Password = entity.Password,
+                    Fax = entity.Fax,
+                    Tin = entity.Tin,
+                    SSN_No = entity.SSN_No,
+                    PhilHealthNumber = entity.PhilHealthNumber,
+                    HDMFNumber = entity.HDMFNumber,
+                    Admin_AuthorisedPerson = entity.Admin_AuthorisedPerson,
+                    Admin_PositionTitle = entity.Admin_PositionTitle,
+                    HR_AuthorisedPerson = entity.HR_AuthorisedPerson,
+                    HR_PositionTitle = entity.HR_PositionTitle,
+                    Finance_AuthorisedPerson = entity.Finance_AuthorisedPerson,
+                    Finance_PositionTitle = entity.Finance_PositionTitle,
+                    E_Signatory = entity.E_Signatory,
+                    Work_Days_Per_Year = entity.Work_Days_Per_Year,
+                    Work_Days_Per_Day = entity.Work_Days_Per_Day,
+                    Work_Months_Per_Year = entity.Work_Months_Per_Year,
+                    Work_hour_Start = entity.Work_hour_Start,
+                    Work_hour_End = entity.Work_hour_End,
+                    Break_Hours = entity.Break_Hours,
+                    Periods_Per_Month = entity.Periods_Per_Month,
+                    Absent_Deduction = entity.Absent_Deduction,
+                    Late_Deduction = entity.Late_Deduction,
+                    OverTime_Comeptition_Optional = entity.OverTime_Comeptition_Optional,
+                    OverTime_Comeptition_OTRates = entity.OverTime_Comeptition_OTRates,
+                    RestDays = entity.RestDays,
+                    thirteen_Month_Compuatation_Type = entity.thirteen_Month_Compuatation_Type,
+                    thirteen_Month_Deduct_Absent = entity.thirteen_Month_Deduct_Absent,
+                    thirteen_Month_Deduct_Late = entity.thirteen_Month_Deduct_Late,
+                    thirteen_Month_Optional = entity.thirteen_Month_Optional,
+                    FinalPay_Deduct_Absent = entity.FinalPay_Deduct_Absent,
+                    FinalPay_Deduct_Late = entity.FinalPay_Deduct_Late,
+                    Final_Pay_13th_Month = entity.Final_Pay_13th_Month,
+                    NetPay_Threshold = entity.NetPay_Threshold,
+                    SSS_Coverage = entity.SSS_Coverage,
+                    SSS_Optional = entity.SSS_Optional,
+                    PhilHealth_Coverage = entity.PhilHealth_Coverage,
+                    PhilHealth_Optional = entity.PhilHealth_Optional,
+                    HDMF = entity.HDMF,
+                    HDMF_Employer_Contribution = entity.HDMF_Employer_Contribution,
+                    PayRoll_Calender = entity.PayRoll_Calender,
+                    Tax_Table = entity.Tax_Table,
+                    Tax_Table_Starts_on = entity.Tax_Table_Starts_on,
+                    Tax_Table_Including_13thmonth = entity.Tax_Table_Including_13thmonth,
+                    Non_Tax_Essential_Sealing = entity.Non_Tax_Essential_Sealing,
+                    Deminimis_Exemption = entity.Deminimis_Exemption
                 };
                 return IMasterRepository.InsertCompany_Profile(filter);
             }
