@@ -200,5 +200,19 @@ namespace FreshersApp.Business.Entities
 		public float TaxableCompensation { get; set; }
 		public float MonetizedLeave { get; set; }
 
+        public string SSS_Number { get; set; }
+		public DateTime SSS_DatePaid { get; set; }
+		public string SSSLoan_Number { get; set; }
+		public DateTime SSSLoan_DatePaid { get; set; }
+		public string SSSCalamityLoan_Number { get; set; }
+		public DateTime SSSCalamityLoan_DatePaid { get; set; }
+		public string PhilHealth_Number { get; set; }
+		public DateTime PhilHealth_DatePaid { get; set; }
+		public string HDMF_Number { get; set; }
+		public DateTime HDMF_DatePaid { get; set; }
+		public string HDMFLoan_Number { get; set; }
+		public DateTime HDMFLoan_DatePaid { get; set; }
+		public string HDMPCalamityLoan_Number { get; set; }
+		public DateTime HDMPCalamityLoan_DatePaid { get; set; }
 	}
 }

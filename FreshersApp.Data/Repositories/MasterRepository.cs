@@ -486,6 +486,54 @@ namespace FreshersApp.Data.Repositories
             }
         }
 
+        public IEnumerable<T> GetGovernmentRecords<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetGovernmentRecords]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertGovernmentRecords(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertGovernmentRecords]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateGovernmentRecords(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateGovernmentRecords]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteGovernmentRecords(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteGovernmentRecords]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public IEnumerable<T> GetEmployeeInformation<T>()
         {
             try
