@@ -18,11 +18,23 @@ namespace FreshersApp.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<T>GetPhilHealth<T>()
+        public IEnumerable<T> GetPhilHealth<T>()
         {
             try
             {
                 return db.Query<T>("[dbo].[SProc_GetPhilHealth]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetTaxtable<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetTaxtable]", commandType: CommandType.StoredProcedure);
             }
             catch (Exception ex)
             {
@@ -467,6 +479,102 @@ namespace FreshersApp.Data.Repositories
             try
             {
                 return db.Query<Int64>("[dbo].[SProc_DeleteSSS]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetGovernmentRecords<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetGovernmentRecords]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertGovernmentRecords(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertGovernmentRecords]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateGovernmentRecords(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateGovernmentRecords]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteGovernmentRecords(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteGovernmentRecords]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<T> GetEmployeeInformation<T>()
+        {
+            try
+            {
+                return db.Query<T>("[dbo].[SProc_GetEmployeeInformation]", commandType: CommandType.StoredProcedure);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long InsertEmployeeInformation(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_InsertEmployeeInformation]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long UpdateEmployeeInformation(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateEmployeeInformation]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public long DeleteEmployeeInformation(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_DeleteEmployeeInformation]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
             }
             catch (Exception ex)
             {
