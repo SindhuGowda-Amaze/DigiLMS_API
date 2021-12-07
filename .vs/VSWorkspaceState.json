@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FreshersApp.API",
+    "\\FreshersApp.Data",
+    "\\FreshersApp.Data\\Interface"
+    "\\FreshersApp.API\\Controllers"
+  ],
+  "SelectedNode": "\\FreshersApp.API\\Web.config",
+  "SelectedNode": "\\FreshersApp.API\\Controllers\\MasterController.cs",
+  "PreviewInSolutionExplorer": false
+}
