@@ -1,13 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
     "",
-    "\\FreshersApp.Business",
-    "\\FreshersApp.Business\\Interface",
-    "\\FreshersApp.Data"
+    "\\FreshersApp.API",
+    "\\FreshersApp.Data",
+    "\\FreshersApp.Data\\Interface"
   ],
-  "SelectedNode": "\\DigiofficenewwappAPI.sln",
-  "SelectedNode": "\\FreshersApp.Business\\Interface\\IMasterManager.cs",
-  "SelectedNode": "\\DigiofficenewwappAPI.sln",
+  "SelectedNode": "\\FreshersApp.API",
   "PreviewInSolutionExplorer": false
 }

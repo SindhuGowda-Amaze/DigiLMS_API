@@ -456,27 +456,27 @@ namespace FreshersApp.Business.Managers
         }
 
 
-        //public long InsertOTRates(MasterEntity entity)
-        //{
-        //    try
-        //    {
-        //        var filter = new
-        //        {
-        //            Day = entity.Day,
-        //            Normal = entity.Normal,
-        //            OT = entity.OT,
-        //            ND = entity.ND,
-        //            NDOT = entity.NDOT,
-        //            ModifiedBy = entity.ModifiedBy,
-                
-        //        };
-        //        return IMasterRepository.InsertOTRates(filter);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
+        public long InsertOTRates(MasterEntity entity)
+        {
+            try
+            {
+                var filter = new
+                {
+                    Day = entity.Day,
+                    Normal = entity.Normal,
+                    OT = entity.OT,
+                    ND = entity.ND,
+                    NDOT = entity.NDOT,
+                 
+
+                };
+                return IMasterRepository.InsertOTRates(filter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public long UpdateOTRates(MasterEntity entity)
         {
@@ -674,10 +674,10 @@ namespace FreshersApp.Business.Managers
                 throw ex;
             }
         }
-        public long InsertOTRates(MasterEntity entity)
-        {
-            throw new NotImplementedException();
-        }
+        //public long InsertOTRates(MasterEntity entity)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public long UpdateSSS(MasterEntity entity)
         {
