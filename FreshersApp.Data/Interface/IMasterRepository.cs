@@ -41,6 +41,7 @@ namespace FreshersApp.Data.Interface
         IEnumerable<T> GetCompanyProfile<T>();
         Int64 InsertCompany_Profile(object filter);
         Int64 DeleteCompanyProfile(object filter);
+        Int64 UpdateCompanyProfile(object filter);
 
         IEnumerable<T> GetOTRates<T>();
         Int64 InsertOTRates(object filter); 

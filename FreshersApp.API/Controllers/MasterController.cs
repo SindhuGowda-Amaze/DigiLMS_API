@@ -169,24 +169,6 @@ namespace FreshersApp.API.Controllers
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         [HttpGet]
         [Route("Master/GetDepartment")]
         public HttpResponseMessage GetDepartment()
@@ -639,16 +621,6 @@ namespace FreshersApp.API.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
         [HttpGet]
         [Route("Master/GetCostcenter")]
         public HttpResponseMessage GetCostcenter()
@@ -737,16 +709,6 @@ namespace FreshersApp.API.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
         [HttpGet]
         [Route("Master/GetFoodSenseProjects")]
         public HttpResponseMessage GetFoodSenseProjects()
@@ -768,7 +730,29 @@ namespace FreshersApp.API.Controllers
             return response;
         }
 
-       
+
+        [HttpPost]
+        [Route("Master/UpdateCompanyProfile")]
+        public HttpResponseMessage UpdateCompanyProfile(MasterEntity entity)
+        {
+            HttpResponseMessage response;
+            try
+            {
+                object res = IMasterManager.UpdateCompanyProfile(entity);
+                response = Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                if (log.IsErrorEnabled)
+                {
+                    log.Error("Error in UpdateCompanyProfile + ex");
+                }
+                response = Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+            return response;
+        }
+
+
 
 
         [HttpGet]

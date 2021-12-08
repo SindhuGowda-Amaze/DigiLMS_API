@@ -61,6 +61,7 @@ namespace FreshersApp.Business.Interface
         Int64 InsertCompany_Profile(MasterEntity entity);
 
         Int64 DeleteCompanyProfile(object filter);
+        Int64 UpdateCompanyProfile(MasterEntity entity);
 
 
         IEnumerable<dynamic> GetSSS();

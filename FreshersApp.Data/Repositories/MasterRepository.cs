@@ -581,5 +581,17 @@ namespace FreshersApp.Data.Repositories
                 throw ex;
             }
         }
+
+        public long UpdateCompanyProfile(object filter)
+        {
+            try
+            {
+                return db.Query<Int64>("[dbo].[SProc_UpdateCompanyProfile]", filter, commandType: CommandType.StoredProcedure).SingleOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
