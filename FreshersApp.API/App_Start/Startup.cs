@@ -1,22 +1,17 @@
-﻿using  FreshersApp.API;
-using  FreshersApp.API.App_Start;
-using  FreshersApp.API.Providers;
+﻿using FreshersApp.API.App_Start;
+using FreshersApp.API.Providers;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using  FreshersApp.API.Providers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 
 [assembly: OwinStartup(typeof(Startup))]
 
-namespace  FreshersApp.API.App_Start
+namespace FreshersApp.API.App_Start
 {
-  
-        public class Startup
+
+    public class Startup
         {
             /// <summary>
             /// 
